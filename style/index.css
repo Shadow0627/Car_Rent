@@ -39,16 +39,79 @@ body
     margin-left: 10vh;
     text-align: right;
     font-size: x-large;
+    cursor: pointer;
 }
 
 .bottom-f
 {
     width: 100%;
-    text-align: center;
     background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
     bottom: 0px;
     height: 10vh;
-    display: flex;
     justify-items: center;
+    text-align: center;
+}
+
+#logon
+{
+    visibility: hidden;
+   
+}
+.login-div form input
+{
+    height: 5vh;
+    width: 100%;
+    font-size:  3vh;
+    background-color: white;
+    border:none;
+    box-shadow: rgba(0, 0, 0, 0.5) 1vw 1vh;
+}
+
+.login-div form input:last-child
+{
+    width: 100%;
+    margin-top: 5vh;
+}
+#logon.active
+{
+    visibility: visible;
+    position: absolute;
+    display: flex;
+    width: 70%;
+    height: 50vh;
+    background: rgba(255, 255, 255, 0.7);
+    margin-top: 10vh;
+    margin-left: 15%;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    transition: 1s;
+
+    
+    
+}
+
+#car
+{
+visibility: hidden;
+}
+
+#car.active
+{
+    visibility: visible;
+    position: absolute;
+    display: flex;
+    width: 70%;
+    height: auto;
+    background: rgba(255, 255, 255, 0.7);
+    margin-top: 10vh;
+    margin-left: 15%;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    transition: 1s;
+
+    
+    
 }

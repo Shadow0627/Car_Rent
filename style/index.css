@@ -30,10 +30,25 @@ body
 .top-nav
 {
     list-style: none;
+    margin-left: 10vh;
 }
 
 .top-nav li
 {
     display: inline;
     margin-left: 10vh;
+    text-align: right;
+    font-size: x-large;
+}
+
+.bottom-f
+{
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 0px;
+    height: 10vh;
+    display: flex;
+    justify-items: center;
 }

@@ -35,4 +35,5 @@ body
 .top-nav li
 {
     display: inline;
+    margin-left: 10vh;
 }

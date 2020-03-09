@@ -26,3 +26,13 @@ body
     font-weight: 900;
     font-size: xx-large;
 }
+
+.top-nav
+{
+    list-style: none;
+}
+
+.top-nav li
+{
+    display: inline;
+}

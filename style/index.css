@@ -1,0 +1,28 @@
+body
+{
+    background-image: url(../image/background/indexbg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-family: 'Ubuntu';
+}
+.top
+{
+    background: rgba(255, 255, 255, 0.5);
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 100%;
+}
+.top-h1
+{
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+    font-weight: 900;
+    font-size: xx-large;
+}

@@ -30,13 +30,13 @@ body
 .top-nav
 {
     list-style: none;
-    margin-left: 10vh;
+    margin-left: 5vh;
 }
 
 .top-nav li
 {
     display: inline;
-    margin-left: 10vh;
+    margin-left: 3vh;
     text-align: right;
     font-size: x-large;
     cursor: pointer;
@@ -91,6 +91,7 @@ input:last-child
     align-items: center;
     font-size: larger;
     transition: 1s;
+    box-shadow: 30px 30px rgba(0, 0, 0, 0.5);
 
     
     
@@ -110,16 +111,25 @@ margin-left: 15%;
 {
     visibility: visible;
     position: absolute;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
     background: rgba(255, 255, 255, 0.7);
     justify-content: center;
     align-items: center;
     font-size: larger;
     transition: 1s;
+    box-shadow: 30px 30px rgba(0, 0, 0, 0.5);
 
     
     
+}
+
+article
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    border: 5px solid black;
+
 }
 
 #con
@@ -141,6 +151,7 @@ margin-left: 15%;
     align-items: center;
     font-size: larger;
     transition: 1s;
+    box-shadow: 30px 30px rgba(0, 0, 0, 0.5);
 }
 #localization
 {
@@ -162,6 +173,7 @@ margin-left: 15%;
     align-items: center;
     font-size: larger;
     transition: 1s;
+    box-shadow: 30px 30px rgba(0, 0, 0, 0.5);
 }
 #register
 {
@@ -169,6 +181,7 @@ margin-left: 15%;
     position: absolute;
     width: 70%;
     height: auto;
+    margin-top: 10vh;
     margin-left: 15%;
 }
 #register.active
@@ -181,6 +194,7 @@ margin-left: 15%;
     align-items: center;
     font-size: larger;
     transition: 1s;
+    box-shadow: 30px 30px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -205,4 +219,5 @@ textarea
 
 .photo
 {
-    backgroudisplay: none;
+    background-color: white;
+}

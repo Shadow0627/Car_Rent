@@ -1,3 +1,5 @@
+<?php session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl">
     <head>
@@ -16,7 +18,17 @@
             <header class="top">
                 <h1 class="top-h1">CAR RENT</h1>
                 <ul class="top-nav">
-                    <li id="showa">Zaloguj</li>
+                <?php 
+                if(isset($_SESSION['u']))
+                {
+                    print('<li>' .$_SESSION["u"]. '</li>');
+                    print('<li id="showa">Wyloguj</li>');
+                }else
+                {
+                    print('<li id="showa">Zaloguj</li>');
+                }
+                ?>
+                    
                     <li id="showb">Auta</li>
                     <li id="showc">Kontakt</li>
                     <li id="showd">Lokalizacja</li>
@@ -25,13 +37,27 @@
             </header>
             <section class="login" id="logon">
                 <div class="login-div">
-                    <form action="php/login.php" method="POST">
+                    <?php
+                    if(isset($_SESSION['u']))
+                    {
+                        print('<form action="php/logout.php" method="POST">
+                        <input type="submit" value="WYLOGUJ">
+                    </form>');
+                    }
+                    else
+                    {
+                        print('
+                        <form action="php/login.php" method="POST">
                         <p>Login/Email/Telefon:</p>
                         <input type="text" name="login-name" required autocomplete="username">
                         <p>Hasło:</p>
                         <input type="password" name="passwd-login" required autocomplete="currect-password"><br>
                         <input type="submit" value="Zaloguj">
                     </form>
+                        ');
+                    }
+                    
+                    ?>
                 </div>
             </section>
                 <section class="cars" id="car">
@@ -43,7 +69,7 @@
                         <input type="email" name="email-con" required autocomplete="email">
                         <p>Twoje imię*:</p>
                         <input type="text" name="name-con" required autocomplete="name">
-                        <p>Twoja wiadomość</p>
+                        <p>Twoja wiadomość*:</p>
                         <textarea name="text-con" required></textarea>
                         <input type="submit" value="Napizs do nas !">
                     </form>

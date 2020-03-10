@@ -55,10 +55,15 @@ body
 
 #logon
 {
-    visibility: hidden;
+    display: none;
+    position: absolute;
+    width: 70%;
+    height: auto;
+    margin-top: 10vh;
+    margin-left: 15%;
    
 }
-.login-div form input
+input
 {
     height: 5vh;
     width: 100%;
@@ -66,23 +71,22 @@ body
     background-color: white;
     border:none;
     box-shadow: rgba(0, 0, 0, 0.5) 1vw 1vh;
+    border-radius: 10px 10px 10px 10px ;
 }
 
-.login-div form input:last-child
+input:last-child
 {
     width: 100%;
     margin-top: 5vh;
+    margin-bottom: 5vh;
+    border-radius: 10px 10px 10px 10px ;
 }
 #logon.active
 {
     visibility: visible;
     position: absolute;
     display: flex;
-    width: 70%;
-    height: 50vh;
     background: rgba(255, 255, 255, 0.7);
-    margin-top: 10vh;
-    margin-left: 15%;
     justify-content: center;
     align-items: center;
     font-size: larger;
@@ -94,19 +98,21 @@ body
 
 #car
 {
-visibility: hidden;
+display: none;
+position: absolute;
+width: 70%;
+height: auto;
+margin-top: 10vh;
+margin-left: 15%;
 }
 
 #car.active
 {
     visibility: visible;
     position: absolute;
-    display: flex;
-    width: 70%;
-    height: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
     background: rgba(255, 255, 255, 0.7);
-    margin-top: 10vh;
-    margin-left: 15%;
     justify-content: center;
     align-items: center;
     font-size: larger;
@@ -115,3 +121,88 @@ visibility: hidden;
     
     
 }
+
+#con
+{
+    display: none;
+    position: absolute;
+    width: 70%;
+    height: auto;
+    margin-top: 10vh;
+    margin-left: 15%;
+}
+#con.active
+{
+    visibility: visible;
+    position: absolute;
+    display: flex;
+    background: rgba(255, 255, 255, 0.7);
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    transition: 1s;
+}
+#localization
+{
+    display: none;
+    display: none;
+    position: absolute;
+    width: 70%;
+    height: auto;
+    margin-top: 10vh;
+    margin-left: 15%;
+}
+#localization.active
+{
+    visibility: visible;
+    position: absolute;
+    display: flex;
+    background: rgba(255, 255, 255, 0.7);
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    transition: 1s;
+}
+#register
+{
+    display: none;
+    position: absolute;
+    width: 70%;
+    height: auto;
+    margin-left: 15%;
+}
+#register.active
+{
+    visibility: visible;
+    position: absolute;
+    display: flex;
+    background: rgba(255, 255, 255, 0.7);
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    transition: 1s;
+}
+
+
+textarea
+{
+    height: 5vh;
+    width: 100%;
+    font-size:  3vh;
+    background-color: white;
+    border:none;
+    box-shadow: rgba(0, 0, 0, 0.5) 1vw 1vh;
+    border-radius: 10px 10px 10px 10px ;
+}
+
+
+.photo img
+{
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+.photo
+{
+    backgroudisplay: none;

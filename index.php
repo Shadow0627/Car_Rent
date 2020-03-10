@@ -33,14 +33,44 @@
                         <input type="submit" value="Zaloguj">
                     </form>
                 </div>
+            </section>
                 <section class="cars" id="car">
                     <?php include("php/car.php") ?>
                 </section>
+                <section class="contact" id="con">
+                    <form action="php/con.php" method="POST">
+                        <p>Twój email*:</p>
+                        <input type="email" name="email-con" required autocomplete="email">
+                        <p>Twoje imię*:</p>
+                        <input type="text" name="name-con" required autocomplete="name">
+                        <p>Twoja wiadomość</p>
+                        <textarea name="text-con" required></textarea>
+                        <input type="submit" value="Napizs do nas !">
+                    </form>
+                </section>
+                <section class="loc" id="localization">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11322.271777707518!2d14.611652207748383!3d53.37521256142282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4700a7f3dcb94a27%3A0x25b388984b728d19!2sCentrum%20Edukacji%20Zdroje!5e0!3m2!1sen!2spl!4v1583844952253!5m2!1sen!2spl" width="100%" height="300vh" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </section>
+                <section class="reg" id="register">
+                    <form action="php/register.php" method="POST">
+                        <P>Login*:</P>
+                        <input type="text" name="login-reg" required autocomplete="username">
+                        <p>Email*:</p>
+                        <input type="email" name="email-reg" required autocomplete="email">
+                        <p>Telefon*:</p>
+                        <input type="text" name="phone-reg" required autocomplete="mobile">
+                        <p>Hasło*:</p>
+                        <input type="password" name="pass-reg" required autocomplete="new-password">
+                        <p>Powtórz hasło*:</p>
+                        <input type="password" name="pass-reg-again" required autocomplete="new-password">
+                        <input type="submit" value="zaloguj">
+                    </form>
+                </section>
             </section>
             
-            <footer class="bottom-f">
+            <!-- <footer class="bottom-f">
                 <h1>Strona napisana przez Piotr Porwit w ramach projektu szkolengo</h1>
-            </footer>
+            </footer> -->
         </main>
     </body>
     <script src="script/index.js"></script>

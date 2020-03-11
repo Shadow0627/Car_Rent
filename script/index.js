@@ -55,3 +55,16 @@
         });
     });
     };
+
+function valid(){
+    if (document.getElementById('reg-pass').value == document.getElementById('reg-pass-again').value)
+)
+    {
+        document.getElementById('reg-button').style.visibility = 'hidden';
+    }
+    else
+    {
+        document.getElementById('reg-button').style.visibility = 'visible';
+
+    }
+}

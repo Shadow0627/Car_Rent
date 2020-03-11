@@ -86,10 +86,10 @@
                         <p>Telefon*:</p>
                         <input type="text" name="phone-reg" required autocomplete="mobile">
                         <p>Hasło*:</p>
-                        <input type="password" name="pass-reg" required autocomplete="new-password">
+                        <input type="password" name="pass-reg" onchange="valid()" required id="reg-pass" autocomplete="new-password">
                         <p>Powtórz hasło*:</p>
-                        <input type="password" name="pass-reg-again" required autocomplete="new-password">
-                        <input type="submit" value="zaloguj">
+                        <input type="password" name="pass-reg-again" required id="reg-pass-again"  autocomplete="new-password">
+                        <input type="submit" value="zaloguj" name="add"  id="reg-button">
                     </form>
                 </section>
             </section>

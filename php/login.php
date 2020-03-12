@@ -20,7 +20,8 @@ $sql= 'SELECT * FROM user WHERE login="' . $login1 . '" AND password="' .$pass1.
     $_SESSION["login"] = 1;
 	   $_SESSION['u'] = $login1;
 	   while($row = mysqli_fetch_array($retval)){
-	   $_SESSION['class'] =$row['class'];
+      $_SESSION['class'] =$row['class'];
+      $_SESSION['user_id'] = $row['ID_user'];
 	   }
 	  header("Location: ../index.php");
 	   }

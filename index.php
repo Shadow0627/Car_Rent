@@ -27,9 +27,26 @@
                 {
                     print('<li id="showa">Zaloguj</li>');
                 }
-                ?>
-                    
+                if(isset($_SESSION['class']))
+                {
+                    if($_SESSION['class'] == "client")
+                    {
+                print('
                     <li id="showb">Auta</li>
+                    ');
+                }
+                else
+                {
+                    print('<li id="showb">Zarządzanie</li>');
+                }
+                }
+                else
+                {
+                    print('
+                    <li id="showb">Auta</li>
+                    ');
+                }
+                    ?>
                     <li id="showc">Kontakt</li>
                     <li id="showd">Lokalizacja</li>
                     <li id="showe">Rejestracja</li>
@@ -61,8 +78,21 @@
                 </div>
             </section>
                 <section class="cars" id="car">
-                    <?php include("php/car.php") ?>
-                </section>
+                <?php
+                if(isset($_SESSION['class'])){
+                if($_SESSION['class'] == "client")
+                {
+                     include("php/car.php");
+                }
+                else
+                {
+                    print('
+                        <a href="php/cms.php">Zarządzanie stroną</a>
+                    ');
+                }}
+                else
+                {include("php/car.php");}
+                ?>    </section>
                 <section class="contact" id="con">
                     <form action="php/con.php" method="POST">
                         <p>Twój email*:</p>

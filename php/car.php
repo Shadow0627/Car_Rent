@@ -29,8 +29,8 @@ while($row = $result->fetch_assoc())
     if(isset($_SESSION["login"])){
     
     print('
-    <form action="rent.php" method="POST">
-        <input type="hidden" value = "' .$row["id_auto"]. '">
+    <form action="php/rent.php" method="POST">
+        <input type="hidden" name = "id" value = "' .$row["id_auto"]. '">
         <input type="submit" value = "WYNAJMI MNIE !">
     </form>
     ');}

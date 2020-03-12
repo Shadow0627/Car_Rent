@@ -1,0 +1,31 @@
+body
+{
+    background-image: url(../image/background/indexbg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    font-family: 'Ubuntu';
+}
+form
+{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 60%;
+    margin-left: 20%;
+    height: auto;
+    font-size: larger;
+    text-align: center;
+}
+form input
+{
+    height: 5vh;
+    width: 60%;
+    font-size: larger;
+}
+
+form input:last-child
+{
+    margin-top: 10vh;
+    width: 40%;
+    font-size: larger;
+}

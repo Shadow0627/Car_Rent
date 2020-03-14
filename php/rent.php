@@ -1,6 +1,7 @@
 <?php
 session_start();
 $id = $_POST['id'];
+$cena = $_POST['cost'];
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -32,6 +33,7 @@ $id = $_POST['id'];
                 <p>Do dnia:</p><input type="date" name="to" required><br>
                 <input type="hidden" value="<?php echo $_SESSION['user_id']; ?>" name="_userid">
                 <input type="hidden" value="<?php echo $id;?>" name="car_id">
+                <input type="hidden" value="<?php echo $cena; ?>" name="cena">
                 <input type="submit" value=" wyanjmij!">
             </form>
         </section>

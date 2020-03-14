@@ -31,6 +31,7 @@ while($row = $result->fetch_assoc())
     print('
     <form action="php/rent.php" method="POST">
         <input type="hidden" name = "id" value = "' .$row["id_auto"]. '">
+        <input type="hidden" name = "cost" value = "' .$row["cena_dzien"]. '">
         <input type="submit" value = "WYNAJMI MNIE !">
     </form>
     ');}

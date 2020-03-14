@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 13, 2020 at 12:21 AM
+-- Generation Time: Mar 14, 2020 at 02:14 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -101,7 +101,8 @@ CREATE TABLE `klient` (
 --
 
 INSERT INTO `klient` (`id_klient`, `imie`, `nazwisko`, `numer_telefonu`, `email`, `data_urodzenia`, `miejscowosc`, `kod_pocztowy`, `ulica`, `numer_domu`, `numer_mieszkania`, `ID_user`) VALUES
-(1, 'Adam', 'Nowak', '123987456', 'nowak@adam.pl', '1999-09-12', 'szczecin', '70-987', 'kolorowa', '2', '2', 1);
+(1, 'Adam', 'Nowak', '123987456', 'nowak@adam.pl', '1999-09-12', 'szczecin', '70-987', 'kolorowa', '2', '2', 1),
+(3, 'Janusz', 'Kowalski', '567109281', 'typowypolak@wp.pl', '1987-07-14', 'Warszawa', '01-675', 'kolorowa', '1', '4', 1);
 
 -- --------------------------------------------------------
 
@@ -130,7 +131,8 @@ CREATE TABLE `pracownik` (
 --
 
 INSERT INTO `pracownik` (`id_pracownik`, `imie_pracownik`, `nazwiko_pracownik`, `stanowisko_pracownik`, `data_zatrudnienia`, `numer_telefonu_pracownik`, `email_praconik`, `miejscowowosc_pracownik`, `ulica_pracownik`, `kod_pocztowy_pracownik`, `numer_domu_pracownik`, `numer_mieszkania_pracownik`, `id_user`) VALUES
-(1, 'ryszard', 'długi', 'kierwonik', '2009-05-25', '254789123', 'dlugo@kontakt.pl', 'szczecin', 'granitowa', '70-998', '1', '5', 2);
+(1, 'ryszard', 'długi', 'kierwonik', '2009-05-25', '254789123', 'dlugo@kontakt.pl', 'szczecin', 'granitowa', '70-998', '1', '5', 2),
+(2, 'Adam', 'Nowak', 'pomoc', '2006-12-21', '321456213', 'adam@nowak.pl', 'szczecin', 'szeroka', '70-443', '2', 'a', 3);
 
 -- --------------------------------------------------------
 
@@ -234,6 +236,7 @@ CREATE TABLE `wynajecie` (
   `id_auto` int(11) NOT NULL,
   `id_klient` int(11) NOT NULL,
   `data_wynajecia` date NOT NULL,
+  `data_zwrot_plan` date NOT NULL,
   `czas_wynajmu` text NOT NULL,
   `przebieg_przed` text NOT NULL,
   `ilosc_paliwa` text NOT NULL,
@@ -245,8 +248,10 @@ CREATE TABLE `wynajecie` (
 -- Dumping data for table `wynajecie`
 --
 
-INSERT INTO `wynajecie` (`id_wynajmu`, `id_auto`, `id_klient`, `data_wynajecia`, `czas_wynajmu`, `przebieg_przed`, `ilosc_paliwa`, `cena_wynajmu`, `id_pracownik`) VALUES
-(1, 0, 1, '2020-03-10', '7 dni', '0', 'pełny bak', '700', 1);
+INSERT INTO `wynajecie` (`id_wynajmu`, `id_auto`, `id_klient`, `data_wynajecia`, `data_zwrot_plan`, `czas_wynajmu`, `przebieg_przed`, `ilosc_paliwa`, `cena_wynajmu`, `id_pracownik`) VALUES
+(1, 0, 1, '2020-03-10', '2020-03-16', '7 dni', '0', 'pełny bak', '700', 1),
+(2, 1, 1, '2020-03-08', '2020-03-12', '5', '0', 'pełny bak', '500', 1),
+(3, 0, 3, '2020-03-23', '2020-03-29', '6', '10000', 'pełny bak', '1200', 2);
 
 -- --------------------------------------------------------
 
@@ -268,7 +273,8 @@ CREATE TABLE `zwrot` (
 --
 
 INSERT INTO `zwrot` (`id_zwrot`, `id_wynajmu`, `data_zwrotu`, `przebieg_zwrot`, `ilosc_paliwa`, `doplata`) VALUES
-(1, 1, '2020-03-17', '10000', 'pusty bak', '500');
+(1, 1, '2020-03-17', '10000', 'pusty bak', '500'),
+(2, 2, '2020-03-12', '5741', 'pełny bak', '0');
 
 --
 -- Indexes for dumped tables
@@ -358,13 +364,13 @@ ALTER TABLE `handlowiec`
 -- AUTO_INCREMENT for table `klient`
 --
 ALTER TABLE `klient`
-  MODIFY `id_klient` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_klient` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pracownik`
 --
 ALTER TABLE `pracownik`
-  MODIFY `id_pracownik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_pracownik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `przeglad`
@@ -394,13 +400,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `wynajecie`
 --
 ALTER TABLE `wynajecie`
-  MODIFY `id_wynajmu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_wynajmu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `zwrot`
 --
 ALTER TABLE `zwrot`
-  MODIFY `id_zwrot` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_zwrot` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables

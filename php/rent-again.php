@@ -72,7 +72,7 @@ $pracownik = rand($min = 0, $arrlg);
     if(mysqli_query($conn, $sql))
     {
         print('
-        donne!!11!!
+        header("Location: ../index.php")
         ');
     }
     else

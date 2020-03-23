@@ -39,9 +39,6 @@ if (mysqli_query($conn, $sql)) {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     die();
 }
-session_start();
-$_SESSION['login'] = 1;
-$_SESSION['u'] = $login;
 header("Location: ../index.php");
 
 

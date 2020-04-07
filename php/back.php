@@ -2,6 +2,7 @@
 session_start();
 $auto = $_POST['id'];
 $userid = $_SESSION['user_id'];
+$_SESSION['autoo'] = $auto;
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -20,9 +21,9 @@ $userid = $_SESSION['user_id'];
         <section>
             <p>Uzupełnij Formulaż zwrotu samochodu</p>
             <form action="back-again.php" method="POST">
-                <label>Stan paliwa</label><select name="bak" id="done" onchange="vall()">
-                    <option value="5">Pół pełny</option>
+                <label>Stan paliwa</label><select name="bak" id="done">
                     <option value="0">Pusty</option>
+                    <option value="5">Pół pełny</option>
                     <option value="10">Pełny</option>
                 </select><br>
                 <label>Przejechane kilometry</label><input type="number" name="km" require><br>
@@ -30,10 +31,5 @@ $userid = $_SESSION['user_id'];
 
             </form>
 
-            <div class = "doplata">
-                <p>Dopłata: </p><br>
-                <p id="val">10</p><p>zł</p>
-            </div>
         </section>
     </body>
-    <script src = "../script/back.js"></script>

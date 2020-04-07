@@ -7,6 +7,7 @@ while($row = mysqli_fetch_assoc($result))
 {
     $klient_id =  $row['MAX'];
 }
+$_SESSION['id_klient'] = $klient_id;
  $sql = "SELECT * FROM wynajecie WHERE id_klient = " .$klient_id. "";
  $result = mysqli_query($conn, $sql);
 while($row = mysqli_fetch_array($result))

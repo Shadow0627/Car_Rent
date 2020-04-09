@@ -71,9 +71,7 @@ $pracownik = rand($min = 0, $arrlg);
     $sql = "INSERT INTO wynajecie (id_auto, id_klient, data_wynajecia, data_zwrot_plan, czas_wynajmu, przebieg_przed, ilosc_paliwa, cena_wynajmu, id_pracownik) VALUES ('" .$carid. "', '" .$klientid. "', '" .$from. "', '" .$to. "', '" .$interval->format('%a'). "', '" .$przebieg. "', '" .$mess. "', '" .$cena. "', '" .$pracownik. "')";
     if(mysqli_query($conn, $sql))
     {
-        print('
-        header("Location: ../index.php")
-        ');
+        header("Location: ../index.php");
     }
     else
     {
